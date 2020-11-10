@@ -6,9 +6,16 @@ File Purpose: Combine data files for each year into one large dataset for analys
 
 @author: Payal Patel 
 
-Inputs: Yearly text files of most popular baby names, text files of most popular baby names by state 
+Inputs: 
+    - Yearly text files of most popular baby names
+    - Text files of most popular baby names by state 
     
-Outputs: 
+Outputs: 4 datasets - 
+    1) popularBabyNames_National.csv - popular baby names across the US from 1880 - 2019
+    2) popularBabyNames_State.csv - popular baby names by state from 1910 - 2019
+    3) popularBabyNames_State_Transformed.csv - transforms #2 into wide dataset (column per state)
+    4) popularBabyNames.csv - combines National dataset and State dataset, for single dataset containing most popular baby names 
+
 """
 
 #####################################################################
@@ -29,12 +36,12 @@ os.chdir('C:/Users/19197/Desktop/github/Tableau/popular-baby-names/names-nationa
 #####################################################################
 ### Create National Baby Names Dataset ###
 directory = 'C:/Users/19197/Desktop/github/Tableau/popular-baby-names/names-national'
-popularBabyNames_National = pd.DataFrame(columns = ['Name', 'Gender', 'Frequency', 'Filename']) 
+popularBabyNames_National = pd.DataFrame(columns = ['Name', 'Gender', 'Frequency']) 
 
 for filename in os.listdir(directory):
     if filename.endswith(".txt"):
         df = pd.read_csv(filename, names = ['Name', 'Gender', 'Frequency'])
-        df['Filename'] = filename
+        #df['Filename'] = filename
         df['Year'] = filename[3:-4]
         popularBabyNames_National = popularBabyNames_National.append(df)
     else:
@@ -63,13 +70,14 @@ for filename in os.listdir(directory):
 #####################################################################    
     
 #####################################################################
-### Merge State Baby Names Dataset with National Baby Names Dataset ###   
-### In Progress
-pvt = pd.pivot_table(popularBabyNames_State, index = ['Year','Name', 'Gender'],
-                     columns='State',
-                     values='State Frequency', aggfunc='sum', fill_value=0)
+### Merge State Baby Names Dataset with National Baby Names Dataset ###           
+popularBabyNames_State_Transformed = popularBabyNames_State.set_index(['Year', 'Name', 'Gender','State']).unstack(['State'])
 
-test = pd.merge(popularBabyNames_National, pvt, how= 'outer', on = ['Year','Name', 'Gender'])
+popularBabyNames_State_Transformed = popularBabyNames_State_Transformed.fillna(0)
+    
+popularBabyNames_State_Transformed= popularBabyNames_State_Transformed.reset_index()
+
+popularBabyNames = pd.merge(popularBabyNames_National.astype(str), popularBabyNames_State_Transformed.astype(str), how= 'outer', on = ['Year','Name', 'Gender'])
 #####################################################################
 
 
@@ -79,7 +87,8 @@ os.chdir('C:/Users/19197/Desktop/github/Tableau/popular-baby-names/')
 
 popularBabyNames_National.to_csv('popularBabyNames_National.csv')
 popularBabyNames_State.to_csv('popularBabyNames_State.csv')
-test.to_csv('test.csv')
+popularBabyNames_State_Transformed.to_csv('popularBabyNames_State_Transformed.csv')
+popularBabyNames.to_csv('popularBabyNames.csv')
 
 #####################################################################
 
