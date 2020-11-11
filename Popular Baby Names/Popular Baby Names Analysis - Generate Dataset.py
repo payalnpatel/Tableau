@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Filename: Popular Baby Names Analysis - Generate Dataset
+Filename: Popular Baby Names Analysis - Generate Datasets
 
 File Purpose: Combine data files for each year into one large dataset for analysis.
 
@@ -75,11 +75,28 @@ popularBabyNames_State_Transformed = popularBabyNames_State.set_index(['Year', '
 
 popularBabyNames_State_Transformed = popularBabyNames_State_Transformed.fillna(0)
     
+
+# Rename columns in popularBabyNames_State_Transformed
+stateColumnNames = popularBabyNames_State_Transformed.columns.values
+
+newStateColumns = []
+
+for i in stateColumnNames:
+    #print(i)
+    newName = i[1] + ' - ' + i[0]
+    #print(newName)
+    newStateColumns.append(newName)
+
+popularBabyNames_State_Transformed.columns = newStateColumns
+    
+# Reset index in popularBabyNames_State_Transformed   
 popularBabyNames_State_Transformed= popularBabyNames_State_Transformed.reset_index()
 
+# Merge national & state datasets
 popularBabyNames = pd.merge(popularBabyNames_National.astype(str), popularBabyNames_State_Transformed.astype(str), how= 'outer', on = ['Year','Name', 'Gender'])
-#####################################################################
 
+
+#####################################################################
 
 #####################################################################
 ### Write datasets to CSV Files ###   
