@@ -6,9 +6,9 @@ Data was retrieved from the [US Social Security Administration website](https://
 2. State-specific data: consisted of text files of popular baby names for each state, between 1910 and 2019. 
 
 The text files available on the US SSA website were used to create 3 datasets.
-1. popularBabyNames.csv
-2. popularBabyNames_National.csv
-3. popularBabyNames_State.csv
+1. popularBabyNames_National.csv :  Popular baby names across the US from 1880 - 2019
+2. popularBabyNames_State.csv : Popular baby names by state from 1910 - 2019
+3. popularBabyNames.csv : Combines National dataset (#1) and State dataset (#2) into a single dataset containing most popular baby names. 
 
 The data dictionary below is for the main dataset that was used in this analysis (popularBabyNames.csv). Additional fields that were created in Tableau are highlighted in blue.
 
