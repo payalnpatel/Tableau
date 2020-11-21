@@ -14,10 +14,62 @@ The data dictionary below is for the main dataset that was used in this analysis
 
 | Field Name | Description  | Data Type | Sample Values |
 | :---:   | :-: | :-: | :-: |
-| Frequency | '' | 283 | '' |
-| Gender | '' | 283 | M, F |
-| Name | '' | 283 | '' |
-| Year | '' | 283 | 1910, 2019 |
+| Frequency | '' | Int | '' |
+| Gender | '' | Str | M, F |
+| Name | '' | Str | '' |
+| Year | '' | Date | 1910, 2019 |
+| AK - State Frequency | '' | Int | -enter num- |
+| AL - State Frequency | '' | Int | -enter num- |
+| AR - State Frequency | '' | Int | -enter num- |
+| AZ - State Frequency | '' | Int | -enter num- |
+| CA - State Frequency | '' | Int | -enter num- |
+| CO - State Frequency | '' | Int | -enter num- |
+| CT - State Frequency | '' | Int | -enter num- |
+| DC - State Frequency | '' | Int | -enter num- |
+| DE - State Frequency | '' | Int | -enter num- |
+| FL - State Frequency | '' | Int | -enter num- |
+| GA - State Frequency | '' | Int | -enter num- |
+| HI - State Frequency | '' | Int | -enter num- |
+| IA - State Frequency | '' | Int | -enter num- |
+| ID - State Frequency | '' | Int | -enter num- |
+| IL - State Frequency | '' | Int | -enter num- |
+| IN - State Frequency | '' | Int | -enter num- |
+| KS - State Frequency | '' | Int | -enter num- |
+| KY - State Frequency | '' | Int | -enter num- |
+| LA - State Frequency | '' | Int | -enter num- |
+| MA - State Frequency | '' | Int | -enter num- |
+| MD - State Frequency | '' | Int | -enter num- |
+| ME - State Frequency | '' | Int | -enter num- |
+| MI - State Frequency | '' | Int | -enter num- |
+| MN - State Frequency | '' | Int | -enter num- |
+| MO - State Frequency | '' | Int | -enter num- |
+| MS - State Frequency | '' | Int | -enter num- |
+| MT - State Frequency | '' | Int | -enter num- |
+| NC - State Frequency | '' | Int | -enter num- |
+| ND - State Frequency | '' | Int | -enter num- |
+| NE - State Frequency | '' | Int | -enter num- |
+| NH - State Frequency | '' | Int | -enter num- |
+| NJ - State Frequency | '' | Int | -enter num- |
+| NM - State Frequency | '' | Int | -enter num- |
+| NV - State Frequency | '' | Int | -enter num- |
+| NY - State Frequency | '' | Int | -enter num- |
+| OH - State Frequency | '' | Int | -enter num- |
+| OK - State Frequency | '' | Int | -enter num- |
+| OR - State Frequency | '' | Int | -enter num- |
+| PA - State Frequency | '' | Int | -enter num- |
+| RI - State Frequency | '' | Int | -enter num- |
+| SC - State Frequency | '' | Int | -enter num- |
+| SD - State Frequency | '' | Int | -enter num- |
+| TN - State Frequency | '' | Int | -enter num- |
+| TX - State Frequency | '' | Int | -enter num- |
+| UT - State Frequency | '' | Int | -enter num- |
+| VA - State Frequency | '' | Int | -enter num- |
+| VT - State Frequency | '' | Int | -enter num- |
+| WA - State Frequency | '' | Int | -enter num- |
+| WI - State Frequency | '' | Int | -enter num- |
+| WV - State Frequency | '' | Int | -enter num- |
+| WY - State Frequency | '' | Int | -enter num- |
 
+																																																
 
 *in progress*
