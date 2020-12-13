@@ -9,3 +9,4 @@ This repository contains the analysis and visualizations I have created using Ta
 
 ### Helpful Resources
 - [Tableau Cheat Sheet](https://github.com/payalnpatel/Tableau/blob/main/Tableau%20Cheat%20Sheet.pdf)
+- [Tableau Free Training Videos](https://www.tableau.com/learn/training/20203)
