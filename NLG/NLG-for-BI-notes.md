@@ -43,3 +43,74 @@ Enter your Arria username and password to get started using the extension.
 
 ![image](https://user-images.githubusercontent.com/35014868/179088048-6c1ffcb5-6806-4f01-b616-57cd52d2a7dd.png)
 
+### Configure Your Data 
+After the extension has been added to the workbook, the data needs to be configured. 
+Within the Tableau object, select <i>Configure your data</i>
+
+![image](https://user-images.githubusercontent.com/35014868/179122067-12e053bf-2d1e-47fe-8a79-ba48eec77cff.png)
+
+
+<i>Tip: If the object containing the extension is not expanded, make sure to scroll down to the bottom to find the "Configure your data" button.</i>
+
+Select the sheet that you want to use as the source for this NLG extension. In this case we are selecting the visualization, <i>Bestselling Books by Genre and Year</i>.
+
+![image](https://user-images.githubusercontent.com/35014868/179122118-1cf18601-71dc-418d-915b-c14dbd0d1fae.png)
+
+Select the <i>Dimensions</i> and <i>Measures</i> to include in the NLG analysis, and then press <i>Save</i>.
+
+![image](https://user-images.githubusercontent.com/35014868/179122160-ebbba721-d8de-424d-8f26-3d1acc9fc009.png)
+
+Once the data has been configured, there are 3 options to select from: NLG Apps, Arria Answers, and Custom Narratives. 
+
+The following two examples show how to configure <b>NLG Apps</b> and <b>Arria Answers</b>.
+
+### NLG Apps Example 
+<i>NLG Apps</i> are templates that allow users to perform NLG analysis on a variety of use cases.
+
+There are several NLG Apps available including <i>Descriptive Statistics</i>, <i>Trend Analysis</i>, and <i>Anomalies</i>.
+
+![image](https://user-images.githubusercontent.com/35014868/179122260-095437f2-d7c9-4d5b-89c8-11f55f72e220.png)
+
+Select <i>Describe a Line Chart</i>, and the relevant <i>Dimensions</i> and <i>Measures</i> for analysis.
+
+![image](https://user-images.githubusercontent.com/35014868/179122365-7faa697a-6e60-4ee0-9642-caf30ade9ea0.png)
+
+
+To add an alias, select an <i>Entity Type</i>, or specify the units, use the drop-down menu next to a <i>Dimension</i> or <i>Measure</i>. Here we are adding an alias to the <b>CNT(bestsellers with categories)</b> measure.
+
+
+![image](https://user-images.githubusercontent.com/35014868/179122432-083fee84-d202-4285-8c6e-cbb12054cc9b.png)
+
+
+Select <i>Important Things</i> as the <i>Narrative Option</i>, and then select <i>Generate</i>.
+
+
+![image](https://user-images.githubusercontent.com/35014868/179122499-fd946d20-a24d-4d6a-843a-1720def5e1ed.png)
+
+
+Once the NLG App has been created, you can add it to the dashboard as you would add any other Tableau object.
+
+![image](https://user-images.githubusercontent.com/35014868/179122515-f1b05ffe-b6c2-401c-a7ab-7648b0508d15.png)
+
+Each NLG App has various input parameters required to generate a narrative. The below image shows the same dashboard, but with the <i>Descriptive Statistics</i> NLG App.
+
+## Arria Answers Example 
+
+<i>Arria Answers</i> enables users to ask a question in natural language, and receive written insights from the underlying data.
+
+To utilize <i>Arria Answers</i> within a dashboard, ensure the data has been configured. Then select <i>Arria Answers</i> from the options available. Specify the <i>Dimensions</i> and <i>Measures</i> to use, then select <i>Start</i>.
+
+
+![image](https://user-images.githubusercontent.com/35014868/179122637-16232288-902b-4676-91d7-96163e86d835.png)
+
+
+Once configured, the user can ask a question, or select one of the suggestions provided.
+
+![image](https://user-images.githubusercontent.com/35014868/179122663-6f0ee206-d8ef-4a40-8952-26ae5b3637d4.png)
+
+The following image shows <i>Arria Answers</i> configured for the line chart, <i>Bestselling Books by Genre and Year</i>. In this case, the user asked <i>"What year had the most number of fiction books?"</i>. From the output, we can see the year with the most and least bestselling fiction books.
+
+![image](https://user-images.githubusercontent.com/35014868/179122747-2db8e8d8-c696-49f9-9c95-82a6035385c4.png)
+
+
+The dashboard used in the above example is available on Tableau Public: https://public.tableau.com/shared/T9WS73WTD?:display_count=n&:origin=viz_share_link
