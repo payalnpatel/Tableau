@@ -1,4 +1,4 @@
-# NLG for BI Notes
+# Natural Language Generation (NLG) for Business Intelligence (BI) Notes
 
 There are several products that enable users to leverage NLG in their dashboards. Many NLG products are available as plug-ins for Business-Intelligence (BI) tools. Generating written narratives from a dataset, and providing written answers to questions asked by users, are two ways in which dashboards can incorporate NLG. A few examples of NLG products available for BI tools include:
 - Arria for BI and Arria NLG Studio by Arria NLG
